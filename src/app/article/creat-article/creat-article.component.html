@@ -1,0 +1,42 @@
+<div class="container min-vh-100 d-flex justify-content-center align-items-center ">
+    
+    <div class="row col-10">
+        <h3 class="text-center m-5">Rédiger un article</h3>
+        <form [formGroup]="creatArticleForm" (ngSubmit)="creatArticle()" >
+            <div>
+                <label  class="form-label m-2 fw-semibolder">Titre d'article</label>
+                <input type="text" [class.is-invalid]="titre?.invalid && titre?.touched" formControlName="titre"  class="form-control"  />
+                <small [class.d-none]="titre?.valid || titre?.untouched  " class="text-danger">Titre est obligatoire!</small>
+              </div>
+  
+              <div>
+                <label  class="form-label m-2 fw-semibolder">Contenue d'article:</label>
+                <textarea [class.is-invalid]="contenue?.invalid && contenue?.touched" formControlName="contenue" class="form-control" rows="3"></textarea>
+                <small class="text-danger" [class.d-none]="contenue?.valid || contenue?.untouched">Tu dois ajouter des contenus!</small>
+              </div>
+  
+              <div>
+                <label  class="form-label m-2 fw-semibolder">Catégorie:</label>
+                <select formControlName="categorie" id="categorie" class="form-select" [class.is-invalid]="categorie?.invalid && categorie?.touched">
+                  <option>Sport</option>
+                  <option>Technologies</option>
+                  <option>Économie</option>
+                  <option>Société</option>
+                  <option>Culture</option>
+                  <option>Mode</option>
+                </select>
+                <small class="text-danger" [class.d-none]="categorie?.valid || categorie?.untouched">Catégorie est obligatoire!</small>
+  
+            </div>
+  
+            <div>
+                <label for="date" class="form-label m-2 fw-semibolder">Date d'émission:</label>
+                <input type="date" formControlName="date" class="form-control" id="date" [class.is-invalid]="date?.invalid && date?.touched"/>
+                <small class="text-danger" [class.d-none]="date?.valid || date?.untouched">Date d'émission est obligatoire!</small>
+            </div>
+              
+            <button [disabled]="!creatArticleForm.valid" type="submit" class="btn btn-primary m-3">Ajouter</button>
+              
+        </form>
+    </div>
+</div>

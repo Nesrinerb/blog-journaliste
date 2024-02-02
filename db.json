@@ -1,0 +1,53 @@
+{
+  "user": [
+    {
+      "name": "aymen",
+      "address": "lac1",
+      "phone": "12345678",
+      "genre": "Homme",
+      "date": "2023-09-15",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "confpassword": "123456",
+      "id": 1
+    },
+    {
+      "name": "aaaa",
+      "address": "aaa",
+      "phone": "123456",
+      "genre": "Femme",
+      "date": "2000-01-01",
+      "email": "test@gmail.com",
+      "password": "1234",
+      "confpassword": "1234",
+      "id": 2
+    },
+    {
+      "name": "bbb",
+      "address": "bbb",
+      "phone": "12456",
+      "genre": "Femme",
+      "date": "2000-01-02",
+      "email": "bbb@gmail.com",
+      "password": "12",
+      "confpassword": "12",
+      "id": 3
+    }
+  ],
+  "article": [
+    {
+      "titre": "aaa",
+      "contenue": "aaa",
+      "categorie": "Mode",
+      "date": "2001-01-01",
+      "id": 2
+    },
+    {
+      "titre": "fff",
+      "contenue": "fff",
+      "categorie": "Société",
+      "date": "2000-01-01",
+      "id": 3
+    }
+  ]
+}
